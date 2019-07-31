@@ -11,14 +11,15 @@ function getDogImages() {
 
 function displayResults(responseJson) {
   console.log(responseJson);
-  for (i=0;i<howManyDoggos;i++){
-  //replace the existing image with the new one
+  
+   for (let i=0;i<howManyDoggos;i++){
+  
   $('.results-img').replaceWith(
     `<img src="${responseJson.message[i]}" class="results-img">`
   )
-  //display the results section
+   }
   $('.results').removeClass('hidden');
-  }
+   
 }
 
 function watchForm() {
