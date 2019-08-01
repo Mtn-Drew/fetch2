@@ -14,7 +14,7 @@ function displayResults(responseJson) {
   
    for (let i=0;i<howManyDoggos;i++){
   
-  $('.results-img').replaceWith(
+  $('.results').append(
     `<img src="${responseJson.message[i]}" class="results-img">`
   )
    }
