@@ -25,6 +25,8 @@ function displayResults(responseJson) {
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
+    //clear previous results
+    $(document.getElementsByClassName('results')).empty();
     howManyDoggos = document.getElementById('requestedNumber').value;
     console.log('this many doggos - ' + howManyDoggos);
     if (howManyDoggos === "")  {
